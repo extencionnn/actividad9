@@ -1,0 +1,54 @@
+
+<div class="container my-2">
+    <h4 class="text-center">Actividades de: {{this.nombreUsuario}}</h4>
+    <a
+            name=""
+            id=""
+            class="btn btn-primary"
+            routerLink="../../../"
+            role="button"
+            >Regresar</a
+        >
+    <div class="row">
+
+        
+        
+        <div
+            class="table-responsive-md"
+        >
+        
+            <table
+                class="table table-striped-columns table-hover table-bordered table-secondary align-middle"
+            >
+                <thead class="table-light">
+                    <caption>
+                        
+                    </caption>
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Completada</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    
+                    @for (item of this.actividades; track $index) {
+                        <tr class="table-primary">
+                            <td scope="row">{{item.title}}</td>
+                            <td>
+                                <div class="form-check form-switch">
+                                    <input [checked]="item.completed" disabled class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                </div>
+                            </td>
+                        </tr>
+                        
+                    }
+                </tbody>
+                <tfoot>
+                    
+                </tfoot>
+            </table>
+        </div>
+        
+
+    </div>
+</div>

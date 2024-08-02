@@ -1,0 +1,41 @@
+<div class="container my-2">
+    <h2 class="text-center">Lista de Albums de {{this.nombreUsuario}}</h2>
+
+    <a
+        name=""
+        id=""
+        class="btn btn-primary"
+        routerLink="../../../"
+        role="button"
+        >Regresar</a
+    >
+    
+
+<div
+    class="table-responsive m-3 text-center"
+>
+    <table
+        class="table"
+    >
+        <thead>
+            <tr  class="table-secondary">
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+            </tr>
+        </thead>
+        <tbody>
+           @for (item of this.albums; track $index) {
+                <tr class="">
+                    <td > {{item.id}} </td>
+                    <td> {{item.title}} </td>
+                    
+                </tr>
+           }
+            
+           
+        </tbody>
+    </table>
+</div>
+
+
+</div>
